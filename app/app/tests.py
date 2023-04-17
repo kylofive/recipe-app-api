@@ -1,6 +1,5 @@
-""" 
+"""
 smaple tests
-
 """
 
 
