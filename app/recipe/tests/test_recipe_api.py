@@ -20,7 +20,7 @@ from recipe.serializers import (
 RECIPES_URL = reverse('recipe:recipe-list')
 
 
-def detial_url(recipe_id):
+def detail_url(recipe_id):
     """create and return a recipe detail URL"""
     return reverse('recipe:recipe-detail', args=[recipe_id])
 
@@ -96,7 +96,7 @@ class PrivateRecipeApiTests(TestCase):
         """Test get recipe detail."""
         recipe = create_recipe(user=self.user)
 
-        url = detial_url(recipe.id)
+        url = detail_url(recipe.id)
         res = self.client.get(url)
 
         serializer = RecipeDetailSerializer(recipe)
