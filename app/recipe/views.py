@@ -42,7 +42,7 @@ class RecipeViewSet(viewsets.ModelViewSet):
 
 
 class TagViewSet(
-        mixins.DestroModelMixin,
+        mixins.DestroyModelMixin,
         mixins.UpdateModelMixin,
         mixins.ListModelMixin,
         viewsets.GenericViewSet,):
